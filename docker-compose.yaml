@@ -1,0 +1,25 @@
+services:
+  oracle19-arm:
+    image: b9a99f368cab
+    container_name: oracle19-arm
+    environment:
+      - ORACLE_PASSWORD=j5F1a3c2t
+      - APP_USER=oca
+      - APP_USER_PASSWORD=oca
+      - ORACLE_DATABASE=XEPDB1
+      - INIT_SGA_SIZE=1536
+      - INIT_PGA_SIZE=512
+    ports:
+      - "1531:1521"
+    volumes:
+      - oracle-data:/opt/oracle/oradata
+      - oracle-backup:/opt/oracle/backup
+    networks:
+      - my-network
+    restart: always
+volumes:
+  oracle-data:
+  oracle-backup:
+networks:
+  my-network:
+    driver: bridge
