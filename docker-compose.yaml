@@ -3,7 +3,7 @@ services:
     image: b9a99f368cab
     container_name: oracle19-arm
     environment:
-      - ORACLE_PASSWORD=j5F1a3c2t
+      - ORACLE_PASSWORD=Oracle123
       - APP_USER=oca
       - APP_USER_PASSWORD=oca
       - ORACLE_DATABASE=XEPDB1
