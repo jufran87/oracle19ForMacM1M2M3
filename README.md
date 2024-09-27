@@ -95,7 +95,7 @@ Manual para desplegar una base de datos Oracle 19c en un pc Mac con procesador M
 4. Copiar la dirección IP del resultado anterior, donde se encuentre el nombre del contenedor de base de datos, el campo IPv4Address, por ejemplo:  
    `"IPv4Address": "172.18.0.2/16",`
 5. Desplegar el cliente sqlcl (SQL*Plus) apuntando a la red y dirección IP del contenedor donde está corriendo la base de datos, aquí mismo se define el usuario con el que se quiere conectar  
-   **Usuario sys:** *docker run --network [nombreRed] --rm -it [idImagenSqlcl] [usuarioSys]/[PasswUsuarioSys]@[IPv4Address]:[ContainerPort]/[BD] as sysdba*. Por ejemplo:  
-    `docker run --network oracle19_my-network --rm -it 6f58bdb2c2fa sys/Oracle123@172.18.0.2:1521/XEPDB1 as sysdba`  
-   **Otro usuario:** *docker run --network [nombreRed] --rm -it [idImagenSqlcl] [usuario]/[PasswUsuario]@[IPv4Address]:[ContainerPort]/[BD]\*. Por ejemplo:  
-    `docker run --network oracle19_my-network --rm -it 6f58bdb2c2fa oca/oca@172.18.0.2:1521/XEPDB1`
+   **Usuario sys:** *docker run --name [containerName] --network [nombreRed] --rm -it [idImagenSqlcl] [usuarioSys]/[PasswUsuarioSys]@[IPv4Address]:[ContainerPort]/[BD] as sysdba*. Por ejemplo:  
+    `docker run --name sqlpluscl --network oracle19_my-network --rm -it 6f58bdb2c2fa sys/Oracle123@172.18.0.2:1521/XEPDB1 as sysdba`  
+   **Otro usuario:** *docker run --name [containerName] --network [nombreRed] --rm -it [idImagenSqlcl] [usuario]/[PasswUsuario]@[IPv4Address]:[ContainerPort]/[BD]\*. Por ejemplo:  
+    `docker run --name sqlpluscl --network oracle19_my-network --rm -it 6f58bdb2c2fa oca/oca@172.18.0.2:1521/XEPDB1`
