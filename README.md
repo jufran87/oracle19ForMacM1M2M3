@@ -1,5 +1,6 @@
 # oracle19ForMacM1M2M3
-Manual para desplegar una base de datos Oracle 19c en un pc Mac con procesador M1, M2, M3
+Manual para desplegar una base de datos Oracle 19c en un pc Mac con procesador M1, M2, M3  
+Puedes ver en video las indicaciones https://youtu.be/5X4AhY1zOoU
 
 # Instrucciones para desplegar la base de datos de Oracle 19c con SQL\*Plus (sqlcl)
 
@@ -20,7 +21,7 @@ Manual para desplegar una base de datos Oracle 19c en un pc Mac con procesador M
 
 1. Abrir una ventana de comandos (terminal)
 2. Descargar la magen de bd Oracle arm  
-   `docker pull dvtoever/oracle`
+   `docker pull dvtoever/oracle:19.3.0-ee-slim-faststart`
 3. Descargar la imagen oficial de sqlcl (SQL\*Plus mejorado)  
    `docker pull container-registry.oracle.com/database/sqlcl:latest`
 
